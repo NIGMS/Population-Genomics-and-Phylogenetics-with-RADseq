@@ -1,0 +1,29 @@
+[
+{
+    "question": "If we wanted to require that a more complete dataset requiring each locus to be present in a greater minimum number of samples, which parameter would we change in the ipyrad params file?",
+    "type": "many_choice",
+    "answers": [
+        {
+            "answer": "[21] [min_samples_locus]",
+            "correct": true,
+            "feedback": "Correct."
+        },
+        {
+            "answer": "[14] [clust_threshold]",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "[24] [max_shared_Hs_locus]",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "[5] [assembly_method]",
+            "correct": false,
+            "feedback": "Incorrect."
+        }
+    ]
+}
+
+]

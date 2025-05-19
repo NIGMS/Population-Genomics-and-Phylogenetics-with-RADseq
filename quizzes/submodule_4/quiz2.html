@@ -1,0 +1,106 @@
+<div class="quiz2-4-container">
+   <style>
+       .quiz2-4-container {
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       .quiz2-4-header {
+           background-color: #4a6495;
+           color: white;
+           padding: 15px 20px;
+           font-size: 1.2em;
+           border-radius: 8px 8px 0 0;
+       }
+       .quiz2-4-content {
+           background-color: white;
+           padding: 20px;
+           border: 1px solid #dee2e6;
+           border-radius: 0 0 8px 8px;
+       }
+       .quiz2-4-option {
+           background-color: #f8f9fa;
+           border: 1px solid #dee2e6;
+           border-radius: 8px;
+           padding: 15px;
+           margin: 10px 0;
+           cursor: pointer;
+           transition: background-color 0.2s;
+       }
+       .quiz2-4-option:hover {
+           background-color: #e9ecef;
+       }
+       .selected {
+           background-color: #dee2e6;
+       }
+       .quiz2-4-feedback {
+           margin-top: 10px;
+           padding: 10px;
+           border-radius: 5px;
+           display: none;
+       }
+       .quiz2-4-correct {
+           background-color: #d4edda;
+           color: #155724;
+       }
+       .quiz2-4-incorrect {
+           background-color: #f8d7da;
+           color: #721c24;
+       }
+   </style>
+   <div class="quiz2-4-header">
+       In the loop to add the pies (`for (i in 1:nrow(for_pies)) {`), which lines would you have to edit if you were plotting pies with more than 2 population clusters?
+   </div>
+   <div class="quiz2-4-content">
+       <div class="quiz2-4-option">
+           x <- for_pies\$Longitude[i]
+       </div>
+       <div class="quiz2-4-option">
+           y <- for_pies\$Latitude[i]
+       </div>
+       <div class="quiz2-4-option">
+           proportions <- c(for_pies\$V1[i], for_pies\$V2[i])
+       </div>
+       <div class="quiz2-4-option">
+           pie_colors <- c("red", "blue")
+       </div>
+       <button class="quiz2-4-submit" style="margin-top: 10px;" onclick="checkAnswer2()">Submit</button>
+       <div id="testing" class="quiz2-4-feedback"></div>
+   </div>
+   <script>
+       // Function to check the selected options
+       function checkAnswer2() {
+           const feedback = document.getElementById('testing');
+           feedback.style.display = 'block';
+           
+           // Get the selected answers
+           const selectedAnswers = Array.from(document.querySelectorAll('.quiz2-4-option.selected')).map(option => option.textContent.trim());
+           
+           // Define the correct answers
+           const correctAnswers = ['proportions <- c(for_pies$V1[i], for_pies$V2[i])', 'pie_colors <- c("red", "blue")'];
+           
+           // Check if the selected answers match the correct ones
+           const isCorrect = correctAnswers.length === selectedAnswers.length &&
+                             correctAnswers.every(item => selectedAnswers.includes(item)) &&
+                             selectedAnswers.every(item => correctAnswers.includes(item));
+           
+           // Display feedback based on the correctness of the selection
+           if (isCorrect) {
+               feedback.className = 'quiz2-4-feedback quiz2-4-correct';
+               feedback.textContent = 'Correct!';
+           } else {
+               feedback.className = 'quiz2-4-feedback quiz2-4-incorrect';
+               feedback.textContent = 'Try again!';
+           }
+       }
+
+       // Handle option selection and toggle the selected class
+       document.querySelectorAll('.quiz2-4-option').forEach(option => {
+           option.addEventListener('click', function () {
+               option.classList.toggle('selected');
+           });
+       });
+   </script>
+</div>
+

@@ -1,0 +1,29 @@
+[
+	{
+    "question": "How many loci do you see in the new dataset (slight variation might be possible)?",
+    "type": "many_choice",
+    "answers": [
+        {
+            "answer": "3569",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "1114",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "550",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "2451",
+            "correct": true,
+            "feedback": "Correct."
+        }
+    ]
+}
+
+]

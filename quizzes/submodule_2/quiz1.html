@@ -1,0 +1,113 @@
+<div class="quiz1-2-container">
+   <style>
+       .quiz1-2-container {
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       .quiz1-2-header {
+           background-color: #4a6495;
+           color: white;
+           padding: 15px 20px;
+           font-size: 1.2em;
+           border-radius: 8px 8px 0 0;
+       }
+       .quiz1-2-content {
+           background-color: white;
+           padding: 20px;
+           border: 1px solid #dee2e6;
+           border-radius: 0 0 8px 8px;
+       }
+       .quiz1-2-option {
+           background-color: #f8f9fa;
+           border: 1px solid #dee2e6;
+           border-radius: 8px;
+           padding: 15px;
+           margin: 10px 0;
+           cursor: pointer;
+           transition: background-color 0.2s;
+       }
+       .quiz1-2-option:hover {
+           background-color: #e9ecef;
+       }
+       .quiz1-2-submit:hover {
+	   background-color: grey;
+	   color: white;
+	   border-color: lightgrey;
+       }
+       .selected {
+	   background-color: #dee2e6;
+	   border-color: lightgrey;
+       }
+       .quiz1-2-feedback {
+           margin-top: 10px;
+           padding: 10px;
+           border-radius: 5px;
+           display: none;
+       }
+       .quiz1-2-correct {
+           background-color: #d4edda;
+           color: #155724;
+       }
+       .quiz1-2-incorrect {
+           background-color: #f8d7da;
+           color: #721c24;
+       }
+   </style>
+   <div class="quiz1-2-header">
+           Which methods are prone to being misled by continuous population structure?
+   </div>
+   <div class="quiz1-2-content">
+       <div class="quiz1-2-option">
+           sNMF
+       </div>
+       <div class="quiz1-2-option">
+           Structure
+       </div>
+       <div class="quiz1-2-option">
+           conStruct
+       </div>
+       <div class="quiz1-2-option">
+           GWAS
+       </div>
+       <div id="feedback1-2" class="quiz1-2-feedback"></div>
+       <button class="quiz1-2-submit" style="margin-top: 10px;" onclick="checkAnswer1()">Submit</button>
+   </div>
+</div>
+
+<script>
+       // Function to check the selected options
+       function checkAnswer1() {
+           const feedback = document.getElementById('feedback1-2');
+           feedback.style.display = 'block';
+
+           // Get the selected answers
+           const selectedAnswers = Array.from(document.querySelectorAll('.quiz1-2-option.selected')).map(option => option.textContent.trim());
+
+           // Define the correct answers
+           const correctAnswers = ['sNMF', 'Structure', 'GWAS'];
+
+           // Check if the selected answers match the correct ones
+           const isCorrect = correctAnswers.length === selectedAnswers.length &&
+                             correctAnswers.every(item => selectedAnswers.includes(item)) &&
+                             selectedAnswers.every(item => correctAnswers.includes(item));
+
+           // Display feedback based on the correctness of the selection
+           if (isCorrect) {
+               feedback.className = 'quiz1-2-feedback quiz1-2-correct';
+               feedback.textContent = 'Correct!';
+           } else {
+               feedback.className = 'quiz1-2-feedback quiz1-2-incorrect';
+               feedback.textContent = 'Try again!';
+           }
+       }
+
+       // Handle option selection and toggle the selected class
+       document.querySelectorAll('.quiz1-2-option').forEach(option => {
+           option.addEventListener('click', function () {
+               option.classList.toggle('selected');
+           });
+       });
+   </script>
+</div>

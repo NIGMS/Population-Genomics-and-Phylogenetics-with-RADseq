@@ -1,0 +1,29 @@
+[
+    {
+        "question": "More bootstraps can give a better approximation of the percentage of bootstraps that support a clade. What variable would you change to use 500 replicates for SVDQuartets",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "nreps",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "nthreads",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "-alrt",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "-B",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]
+

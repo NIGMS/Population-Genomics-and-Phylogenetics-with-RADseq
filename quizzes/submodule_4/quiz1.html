@@ -1,0 +1,86 @@
+<div class="quiz1-4-container">
+   <style>
+       .quiz1-4-container {
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       .quiz1-4-header {
+           background-color: #4a6495;
+           color: white;
+           padding: 15px 20px;
+           font-size: 1.2em;
+           border-radius: 8px 8px 0 0;
+       }
+       .quiz1-4-content {
+	   background-color: white;
+           padding: 20px;
+           border: 1px solid #dee2e6;
+           border-radius: 0 0 8px 8px;
+       }
+       .quiz1-4-option {
+           background-color: #f8f9fa;
+           border: 1px solid #dee2e6;
+           border-radius: 8px;
+           padding: 15px;
+           margin: 10px 0;
+           cursor: pointer;
+           transition: background-color 0.2s;
+       }
+       .quiz1-4-option:hover {
+           background-color: #e9ecef;
+       }
+       .quiz1-4-feedback {
+           margin-top: 10px;
+           padding: 10px;
+           border-radius: 5px;
+           display: none;
+       }
+       .quiz1-4-correct {
+           background-color: #d4edda;
+           color: #155724;
+       }
+       .quiz1-4-incorrect {
+           background-color: #f8d7da;
+           color: #721c24;
+       }
+       a:hover {
+	   color: red;
+       }
+   </style>
+   <div class="quiz1-4-header">
+	   Look at the phylo.to.map documentation <a href="http://blog.phytools.org/2023/09/updates-to-phytools-function-phylotomap.html">here</a>. What argument would you edit to plot the tree directly on the map, instead of above or on the side?
+   </div>
+   <div class="quiz1-4-content">
+       <div class="quiz1-4-option" onclick="checkAnswer3('a')">
+           direction="rightwards"
+       </div>
+       <div class="quiz1-4-option" onclick="checkAnswer3('b')">
+           ftype="i"
+       </div>
+       <div class="quiz1-4-option" onclick="checkAnswer3('c')">
+           delimit_map=TRUE
+       </div>
+       <div class="quiz1-4-option" onclick="checkAnswer3('d')">
+           type="direct"
+       </div>
+       <div id="feedback3" class="quiz1-4-feedback"></div>
+   </div>
+</div>
+
+<script>
+   function checkAnswer3(selected) {
+       const feedback = document.getElementById('feedback3');
+       feedback.style.display = 'block';
+       
+       if (selected === 'd') {
+           feedback.className = 'quiz1-4-feedback quiz1-4-correct';
+           feedback.textContent = 'Correct!';
+       } else {
+           feedback.className = 'quiz1-4-feedback quiz1-4-incorrect';
+           feedback.textContent = 'Incorrect.';
+       }
+   }
+</script>
+

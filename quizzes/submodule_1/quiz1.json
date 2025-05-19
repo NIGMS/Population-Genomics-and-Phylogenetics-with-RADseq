@@ -1,0 +1,29 @@
+[
+{
+    "question": "Which ipyrad parameter controls the similarity threshold for when reads should be considered as part of a single locus within a given sample (when using de novo assembly)?",
+    "type": "many_choice",
+    "answers": [
+        {
+            "answer": "[21] [min_samples_locus]",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "[14] [clust_threshold]",
+            "correct": true,
+            "feedback": "Correct."
+        },
+        {
+            "answer": "[24] [max_shared_Hs_locus]",
+            "correct": false,
+            "feedback": "Incorrect."
+        },
+        {
+            "answer": "[5] [assembly_method]",
+            "correct": false,
+            "feedback": "Incorrect."
+        }
+    ]
+}
+]
+

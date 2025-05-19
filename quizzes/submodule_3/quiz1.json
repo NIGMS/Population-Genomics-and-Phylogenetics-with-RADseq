@@ -1,0 +1,29 @@
+[
+    {
+        "question": "Take a look at the IQ-TREE model documentation [here](http://www.iqtree.org/doc/Tutorial#choosing-the-right-substitution-model). If you want to use the ModelFinderPlus option that we've been using, but while accounting for only variable characters in the alignment, what flag would you use?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "-m MF",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "-m TIM2+I+G",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "-m GTR+ASC",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "-m MFP+ASC",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    }
+]
+
