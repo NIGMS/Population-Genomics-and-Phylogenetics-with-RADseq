@@ -53,7 +53,13 @@ Finally, you will infer and plot phylogenetic trees in the final two submodules.
 
 
 <br>
-
+<p align="center">
+<a href="https://www.youtube.com/watch?v=-1WZE0CauBA&list=PLXaEJPtnQ4w7Vu7vqWbttBjUGrPp4Qa7b&index=4">
+<img src="images/wy_video1.png" alt="RADseq cloud overview", width="550"/>
+</a>
+<br>
+<span> Click above image to watch this video </span>
+</p>
 
 
 
@@ -75,7 +81,7 @@ You will execute each tutorial in GCP's VertexAI Workbench. Follow the documenta
 - Additionally, in the Environment tab, you will need to select `Use a custom container` and enter `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/nigms-vertex-r-wy` in the box for "Docker container image" - **this is critical because this container includes necessary software for these tutorials**
 
 
-Once you have created and started your instance, open a terminal window and clone this Github repository: `git clone https://github.com/wyoibc/RADseq_cloud_learn`. This should download all tutorial files into a directory called "RADseq_cloud_learn". Double click this directory, and then double click tutorial `.ipynb` files within to run through each.
+Once you have created and started your instance, open a terminal window and clone this Github repository: `git clone https://github.com/NIGMS/Population-Genomics-and-Phylogenetics-with-RADseq.git`. This should download all tutorial files into a directory called "RADseq_cloud_learn". Double click this directory, and then double click tutorial `.ipynb` files within to run through each.
 
 
 There are submodules, each in a separate Jupyter notebook:
@@ -99,7 +105,7 @@ There are submodules, each in a separate Jupyter notebook:
 
 ## **Software Requirements**
 
-These turtorials run in Jupyter Notebooks. Modules 1 and 3 run in Python kernels and modules 2 and 4 run in R kernels.
+These tutorials run in Jupyter Notebooks. Modules 1 and 3 run in Python kernels and modules 2 and 4 run in R kernels.
 
 In submodule 1, you will use mamba to install ipyrad. Alternate documentation on installation can be found [here](https://ipyrad.readthedocs.io/en/master/3-installation.html).
 
