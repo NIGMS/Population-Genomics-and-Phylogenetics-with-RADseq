@@ -69,20 +69,16 @@ Finally, you will infer and plot phylogenetic trees in the final two submodules.
 To run this on Google Cloud Platform (GCP), you will need to have or create a Google account and GCP project.
 
 
-Once you have these, navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/), log in, and select the project you want to use from the dropdown in the upper left near the "Google Cloud" icon.
+Once you have these, navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/), log in, and [select your project](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/open_project_extramural.md).
 
 
-You will execute each tutorial in GCP's VertexAI Workbench. Follow the documentation [here](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/vertexai.md) to set up an instance, following steps 1-8 with the following specifications:
+You will execute each tutorial in GCP's VertexAI Workbench. Follow the documentation [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateVertexAINotebooks.md#2-spin-up-instance-from-a-container) to set up an instance with the following specifications:
 
-- Step 5: for "Region" select `us-east4-a`
+- Step 6: In the Environment tab, you will need to select `Use a custom container` and enter `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/nigms-vertex-r-wy` in the box for "Docker container image" - **this is critical because this container includes necessary software for these tutorials**
 
 - Step 7: for "Machine type" select `n2` and `n2-standard-8 (8 vCPUs, 32 GB RAM)`
 
-- Additionally, in the Environment tab, you will need to select `Use a custom container` and enter `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/nigms-vertex-r-wy` in the box for "Docker container image" - **this is critical because this container includes necessary software for these tutorials**
-
-
 Once you have created and started your instance, open a terminal window and clone this Github repository: `git clone https://github.com/NIGMS/Population-Genomics-and-Phylogenetics-with-RADseq.git`. This should download all tutorial files into a directory called "RADseq_cloud_learn". Double click this directory, and then double click tutorial `.ipynb` files within to run through each.
-
 
 There are submodules, each in a separate Jupyter notebook:
 
