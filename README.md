@@ -1,17 +1,13 @@
-<img src="images/anchor_graphic_WY.png"/>
-
-
-<br>
-<br>
-<br>
-
-
 # RADseq for Population Genetics and Phylogenetics
----------------------------------
 
-Wyoming INBRE Data Science Core
+This module was developed by the Wyoming INBRE Data Science Core
 
 <br>
+<p align="center">
+    <img src="images/anchor_graphic_WY.png" width="400" />
+</p>
+
+## Contents
 
 + [Overview](#overview)
 + [Background](#background)
@@ -22,13 +18,6 @@ Wyoming INBRE Data Science Core
 + [Funding](#funding)
 + [License for Data](#license-for-data)
 
-
-<br>
-<br>
-<br>
-
-
-
 ## **Overview**
 
 
@@ -36,10 +25,6 @@ In this tutorial, we show users how to assemble restriction-site associated DNA 
 
 
 This tutorial was developed to be executed on Google Cloud Platform, but can easily be adapted to other cloud, high performance compute, or even desktop/laptop computing systems.
-
-
-<br>
-
 
 ## **Background**
 
@@ -61,16 +46,12 @@ Finally, you will infer and plot phylogenetic trees in the final two submodules.
 <span> Click above image to watch this video </span>
 </p>
 
-
-
 ## **Getting Started**
 
 
 To run this on Google Cloud Platform (GCP), you will need to have or create a Google account and GCP project.
 
-
 Once you have these, navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/), log in, and [select your project](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/open_project_extramural.md).
-
 
 You will execute each tutorial in GCP's VertexAI Workbench. Follow the documentation [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateVertexAINotebooks.md#2-spin-up-instance-from-a-container) to set up an instance with the following specifications:
 
@@ -80,22 +61,19 @@ You will execute each tutorial in GCP's VertexAI Workbench. Follow the documenta
 
 Once you have created and started your instance, open a terminal window and clone this Github repository: `git clone https://github.com/NIGMS/Population-Genomics-and-Phylogenetics-with-RADseq.git`. This should download all tutorial files into a directory called "RADseq_cloud_learn". Double click this directory, and then double click tutorial `.ipynb` files within to run through each.
 
-There are submodules, each in a separate Jupyter notebook:
+There are three submodules, each in a separate Jupyter notebooks:
 
 - RADseq data processing & assembly (using ipyrad): [1_ipyrad.ipynb](https://github.com/wyoibc/RADseq_cloud_learn/blob/master/1_ipyrad.ipynb) covers how to assemble RADseq data using the ipyrad pipeline
 - Population structure in R: [2_popstructR.ipynb](https://github.com/wyoibc/RADseq_cloud_learn/blob/master/2_popstructR.ipynb) covers some basic population genetics analyses of the assembled RADseq data
 - Phylogenetic tree inference: [3_phylo.ipynb](https://github.com/wyoibc/RADseq_cloud_learn/blob/master/3_phylo.ipynb) covers phylogenetic inference of the assembled RADseq data
 - Plotting phylogenetic trees in R: [4_plot_phylo.ipynb](https://github.com/wyoibc/RADseq_cloud_learn/blob/master/4_plot_phylo.ipynb) covers plotting and manipulation of the phylogenetic trees estimated in the previous tutorial
 
+:exclamation: When you are finished, stop your virtual machine by checking your notebook and pushing the stop button so you aren't charged for a machine that is sitting idle.
+
+## Architecture Design
 <br>
 
 <img src="images/WY_architecture.png"/>
-
-<br>
-
-
-* **When you are finished, stop your virtual machine by checking your notebook and pushing the stop button so you aren't charged for a machine that is sitting idle**
-
 
 <br>
 
@@ -111,13 +89,6 @@ In submodules 2 and 4, you will run all analyses in R, using packages as describ
 
 In submodule 3, you will run [IQtree](http://www.iqtree.org/) and the method SVDQuartets within the [PAUP](https://paup.phylosolutions.com/get-paup/) software package.
 
-<br>
-
-
-
-
-<br>
-
 ## **Data**
 
 
@@ -125,38 +96,15 @@ You will be working with empirical double digest RADseq data that I (Sean Harrin
 
 The data are single-end reads generated on an Illumina hiSeq. The published analyses of these data are available in [Harrington et al. 2018](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.13114). We have made the raw data available in a bucket that you will download within the tutorials, but the raw sequence data are also available in the NCBI SRA, as stated in the manuscript.
 
-
-
-<br>
-
-
 ## **Funding**
 
 This module was funded through an administrative supplement to the Wyoming IDeA Network of Biomedical Research Excellence from the National Institute of General Medical Sciences of the National Institutes of Health under grant number 3P20GM103432-23S1.
 
-
-
-
-<br>
-
 ## **License for Data**
-
-
 
 Text and materials are licensed under a Creative Commons CC-BY-NC-SA license. The license allows you to copy, remix and redistribute any of our publicly available materials, under the condition that you attribute the work (details in the license) and do not make profits from it.
 
 ![Creative commons license](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-
-
-
-
-
-
-<br>
-
-
-
 
